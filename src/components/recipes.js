@@ -26,7 +26,7 @@ export default function Recipe({ categories, foods }) {
 const ArticleCard = ({ item, index, navigation }) => {
     return (
         <View style={[styles.cardContainer, { paddingLeft: 20, paddingRight: 15 }]} testID="articleDisplay">
-            <TouchableOpacity onPress={() => navigation.navigate('RecipeDetail', { item })}>
+            <TouchableOpacity onPress={() => navigation.navigate('RecipeDetail', item)}>
                 <Image style={styles.articleImage} source={{ uri: item.recipeImage }} />
                 <View style={styles.row}>
                     <Text style={styles.articleText}>{item.recipeName}</Text>
