@@ -1,16 +1,6 @@
-import {
-    View,
-    Text,
-    ScrollView,
-    Image,
-    StyleSheet
-} from "react-native";
-import React, {
-    useState
-} from "react";
-import {
-    StatusBar
-} from "expo-status-bar";
+import { View, Text, ScrollView, Image, StyleSheet } from "react-native";
+import React, { useState } from "react";
+import { StatusBar } from "expo-status-bar";
 import {
     widthPercentageToDP as wp,
     heightPercentageToDP as hp,
@@ -699,68 +689,32 @@ export default function HomeScreen() {
     );
 
     return ( <
-        View style = {
-            styles.container
-        } >
+        View style = { styles.container } >
         <
         StatusBar style = "dark" / >
         <
-        ScrollView showsVerticalScrollIndicator = {
-            false
-        }
-        contentContainerStyle = {
-            styles.scrollContainer
-        }
-        testID = "scrollContainer" >
+        ScrollView showsVerticalScrollIndicator = { false } contentContainerStyle = { styles.scrollContainer } testID = "scrollContainer" >
         <
-        View style = {
-            styles.headerContainer
-        }
-        testID = "headerContainer" >
+        View style = { styles.headerContainer } testID = "headerContainer" >
         <
-        Image source = {
-            {
-                uri: 'https://cdn.pixabay.com/photo/2017/02/23/13/05/avatar-2092113_1280.png'
-            }
-        }
-        style = {
-            styles.avatar
-        }
+        Image source = { { uri: 'https://cdn.pixabay.com/photo/2017/02/23/13/05/avatar-2092113_1280.png' } } style = { styles.avatar }
         /> <
-        Text style = {
-            styles.greetingText
-        } > Hello, User! < /Text> <
+        Text style = { styles.greetingText } > Hello, User! < /Text> <
         /View>
 
         <
-        View style = {
-            styles.titleContainer
-        } >
+        View style = { styles.titleContainer } >
         <
-        Text style = {
-            styles.title
-        } > Make your own food, < /Text> <
-        Text style = {
-            styles.subtitle
-        } >
-        stay at < Text style = {
-            styles.highlight
-        } > home < /Text> <
+        Text style = { styles.title } > Make your own food, < /Text> <
+        Text style = { styles.subtitle } >
+        stay at < Text style = { styles.highlight } > home < /Text> <
         /Text> <
         /View>
 
         <
         View testID = "categoryList" >
         <
-        Categories categories = {
-            categories
-        }
-        activeCategory = {
-            activeCategory
-        }
-        handleChangeCategory = {
-            handleChangeCategory
-        }
+        Categories categories = { categories } activeCategory = { activeCategory } handleChangeCategory = { handleChangeCategory }
         /> <
         /View>
 

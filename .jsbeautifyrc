@@ -1,37 +1,30 @@
 {
-    "html": {
-        "allowed_file_extensions": ["htm", "html", "xhtml", "shtml", "xml", "svg", "dust"],
-        "brace_style": "collapse",
-        "end_with_newline": true,
-        "indent_char": " ",
-        "indent_handlebars": true,
-        "indent_inner_html": false,
-        "indent_scripts": "keep",
-        "indent_size": 4,
-        "max_preserve_newlines": 10,
-        "preserve_newlines": true,
-        "unformatted": ["a", "span", "img", "code", "pre", "sub", "sup", "em", "strong", "b", "i", "u", "strike", "big", "small", "pre", "h1",
-            "h2", "h3", "h4", "h5", "h6"
-        ],
-        "wrap_line_length": 0
+    "js": {
+      "indent_size": 4,
+      "indent_with_tabs": false,
+      "max_line_length": 120,
+      "end_with_newline": true,
+      "eol": "\n",
+      "brace_style": "collapse,preserve-inline",
+      "space_in_paren": false,
+      "space_in_empty_paren": false,
+      "jslint_happy": false,
+      "keep_array_indentation": false,
+      "space_after_anon_function": true,
+      "break_chained_methods": false,
+      "comma_first": false,
+      "operator_position": "before-newline"
     },
     "css": {
-        "allowed_file_extensions": ["css", "scss", "sass", "less"],
-        "end_with_newline": true,
-        "indent_char": " ",
-        "indent_size": 4,
-        "newline_between_rules": true,
-        "selector_separator": " ",
-        "selector_separator_newline": true,
-        "preserve_newlines": true,
-        "max_preserve_newlines": 10
+      "indent_size": 4,
+      "indent_with_tabs": false
     },
-    "js": {
-       "max_preserve_newlines": 10,
-        "max_line_length": 150,
-        "indent_size": 4,
-        "indent_with_tabs": false,
-        "end_with_newline": true,
-        "eol": "\n"
+    "html": {
+      "indent_size": 4,
+      "indent_with_tabs": false,
+      "wrap_line_length": 120,
+      "end_with_newline": true,
+      "eol": "\n"
     }
-}
+  }
+  
