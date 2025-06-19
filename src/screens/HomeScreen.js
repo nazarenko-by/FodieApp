@@ -1,5 +1,6 @@
-import { View, Text, ScrollView, Image, StyleSheet } from 'react-native';
 import React, { useState } from 'react';
+import { View, Text, ScrollView, Image, StyleSheet } from 'react-native';
+import { useSelector } from 'react-redux';
 import { StatusBar } from 'expo-status-bar';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import Categories from '../components/categories';
@@ -8,13 +9,15 @@ import FoodItems from '../components/recipes';
 import { CATEGORIES, DEFAULT_FOOD } from '../helper/const';
 
 export default function HomeScreen() {
+    const allFood = useSelector((state) => state.common.recipes);
+
     const [activeCategory, setActiveCategory] = useState('Chicken');
 
     // Hardcoded categories for news
     const [categories, setCategories] = useState(CATEGORIES);
 
     // Keep all foods in state (unfiltered list)
-    const [allFood, setAllFood] = useState(DEFAULT_FOOD);
+    // const [allFood, setAllFood] = useState(DEFAULT_FOOD);
 
     const handleChangeCategory = (category) => {
         setActiveCategory(category);

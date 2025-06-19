@@ -10,7 +10,7 @@ export default function RecipeDetailScreen(props) {
 
     const dispatch = useDispatch();
     const favoriterecipes = useSelector((state) => state.favorites.favoriterecipes);
-    const isFavourite = favoriterecipes?.some((favrecipe) => favrecipe.idFood === recipe.idFood); // Check by idrecipe
+    const isFavourite = favoriterecipes?.some((item) => item === recipe.idFood); // Check by idrecipe
 
     const navigation = useNavigation();
 
@@ -83,7 +83,7 @@ export default function RecipeDetailScreen(props) {
                     <Text style={styles.sectionTitle}>Ingredients</Text>
                     <View style={styles.ingredientsList} testID="ingredientsList">
                         {recipe.ingredients.map((i) => (
-                            <View key={i} style={styles.ingredientItem}>
+                            <View key={i.ingredientName} style={styles.ingredientItem}>
                                 <View style={styles.ingredientBullet} />
                                 <Text style={styles.ingredientText}>
                                     {i.ingredientName} {i.measure}
