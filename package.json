@@ -31,12 +31,14 @@
     "devDependencies": {
         "@babel/core": "^7.20.0",
         "husky": "^9.1.7",
-        "js-beautify": "^1.15.4",
         "lint-staged": "^16.1.2",
-        "metro": "^0.82.4"
+        "metro": "^0.82.4",
+        "prettier": "^3.5.3"
     },
     "lint-staged": {
-        "*.{js,jsx,ts,tsx,json,css,html}": "js-beautify --config .jsbeautifyrc -r"
+        "*.{js,jsx,ts,tsx,json,css,html}": [
+            "prettier --write"
+        ]
     },
     "private": true
 }
