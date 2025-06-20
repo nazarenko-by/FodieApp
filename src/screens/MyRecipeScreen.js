@@ -14,7 +14,6 @@ export default function MyRecipeScreen() {
             try {
                 const recipes = await AsyncStorage.getItem('recipes');
                 const parsedrecipes = recipes ? JSON.parse(recipes) : [];
-                console.log(parsedrecipes);
 
                 setrecipes(parsedrecipes);
                 setLoading(false);
