@@ -6,7 +6,7 @@ import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-nat
 import Categories from '../components/categories';
 import FoodItems from '../components/recipes';
 
-import { CATEGORIES, DEFAULT_FOOD } from '../helper/const';
+import { CATEGORIES } from '../helper/const';
 
 export default function HomeScreen() {
     const allFood = useSelector((state) => state.common.recipes);
